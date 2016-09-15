@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fivelets</h1>
+<% @fivelets.each do |fivelet| %>
+<h2><%= link_to fivelet.title, fivelet %></h2>
+<p><i><%= friendly_date fivelet.created_at %></i></p>
+<p><%= fivelet.suggestion_1 %></p>
+<p><%= fivelet.suggestion_2 %></p>
+<p><%= fivelet.suggestion_3 %></p>
+<p><%= fivelet.suggestion4 %></p>
+<p><%= fivelet.suggestion5 %></p>
+
+
+<p>
+  <%= link_to 'Edit', edit_fivelet_path(fivelet) %>
+  <%= link_to 'Destroy', fivelet, method: :delete,
+  data:{confirm: 'Are you sure you want to destroy this Fivelet?'} %>
+</p>
+<% end %>
+
+
+
+
+<%= link_to 'New Fivelet', new_fivelet_path %>

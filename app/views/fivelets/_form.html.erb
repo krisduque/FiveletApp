@@ -1,0 +1,52 @@
+<%= form_for(fivelet) do |f| %>
+  <% if fivelet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fivelet.errors.count, "error") %> prohibited this fivelet from being saved:</h2>
+
+      <ul>
+      <% fivelet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suggestion_1 %>
+    <%= f.text_field :suggestion_1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suggestion_2 %>
+    <%= f.text_field :suggestion_2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suggestion_3 %>
+    <%= f.text_field :suggestion_3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suggestion4 %>
+    <%= f.text_field :suggestion4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :suggestion5 %>
+    <%= f.text_field :suggestion5 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

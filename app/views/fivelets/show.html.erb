@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <%= @fivelet.title %>
+</p>
+
+<h3>
+  By:
+  <%= @fivelet.author %>
+</p>
+
+<p>
+  <strong>Suggestion 1:</strong>
+  <%= @fivelet.suggestion_1 %>
+</p>
+<p>
+  <strong>Suggestion 2:</strong>
+  <%= @fivelet.suggestion_2 %>
+</p>
+<p>
+  <strong>Suggestion 3:</strong>
+  <%= @fivelet.suggestion_3 %>
+</p>
+<p>
+  <strong>Suggestion 4:</strong>
+  <%= @fivelet.suggestion4 %>
+</p>
+<p>
+  <strong>Suggestion 5:</strong>
+  <%= @fivelet.suggestion5 %>
+</p>
+
+<h3>Comments</h3>
+<%= render @fivelet.comments %>
+
+<h4>New Comment </h4>
+<%= form_for [@fivelet, @fivelet.comments.build] do |f| %>
+               <div class='field'>
+                 <%= f.label :author %><br>
+                 <%= f.text_field :author %>
+               </div>
+               <div class='field'>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class='actions'>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_fivelet_path(@fivelet) %> |
+<%= link_to 'Back', fivelets_path %>

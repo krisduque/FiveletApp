@@ -1,0 +1,1 @@
+json.array! @fivelets, partial: 'fivelets/fivelet', as: :fivelet

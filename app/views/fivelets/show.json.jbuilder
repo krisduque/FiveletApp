@@ -1,0 +1,1 @@
+json.partial! "fivelets/fivelet", fivelet: @fivelet
